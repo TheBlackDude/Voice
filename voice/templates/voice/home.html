@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+ <!-- HomePage-->
+<section id="main-slider" class="no-margin">
+
+    <!-- Header -->
+    <div class="carousel slide" id="main-slider" class="no-margin" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#main-slider" data-slide-to="0" class="active"></li>
+			<li data-target="#main-slider" data-slide-to="1"></li>
+			<li data-target="#main-slider" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="item active" style="background-image:url({% static 'img/bg1.jpg' %});margin-top:50px;color:#FFF;">
+			    <div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="carousel-content">
+							    <h2 class="animation animated-item-2">As-Salam Alaykoum, welcome to The Islamic Center of FreeTown.</h2>
+							    </br></br>
+							    <p class="lead" class="animation animated-item-1">
+							    بِسۡمِ ٱللهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿١﻿) 
+								ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَـٰلَمِينَ (﻿٢﻿) ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿٣﻿) مَـٰلِكِ يَوۡمِ ٱلدِّينِ (﻿٤﻿) إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ (﻿٥﻿) ٱهۡدِنَا ٱلصِّرَٲطَ ٱلۡمُسۡتَقِيمَ (﻿٦﻿) صِرَٲطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ (﻿٧﻿)
+								</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-xs-6 animation animated-item-4">
+							<div class="slider-img">
+							    <img src="{% static 'img/img1.png' %}" class="img-responsive">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item" style="background-image:url({% static 'img/bg2.jpg' %});margin-top:50px;" class="img-responsive">
+				<div class="container">
+					<div class="row" style="margin-top:20px; color:#FFF;">
+						<div class="col-sm-6">
+							<div class="carousel-content">
+							    <h2 class="animation animated-item-2">As-Salam Alaykoum, WelCome To The Islamic Center of FreeTown.</h2>
+							    </br></br>
+							    <p class="lead" class="animation animated-item-1">
+							    بِسۡمِ ٱللهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿١﻿) 
+								ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَـٰلَمِينَ (﻿٢﻿) ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿٣﻿) مَـٰلِكِ يَوۡمِ ٱلدِّينِ (﻿٤﻿) إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ (﻿٥﻿) ٱهۡدِنَا ٱلصِّرَٲطَ ٱلۡمُسۡتَقِيمَ (﻿٦﻿) صِرَٲطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ (﻿٧﻿)
+								</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-xs-6 animation animated-item-4">
+							<div class="slider-img">
+							    <img src="{% static 'img/img2.png' %}" class="img-responsive">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item" style="background-image:url({% static 'img/bg3.jpg' %});margin-top:50px;" class="img-responsive">
+				<div class="container">
+					<div class="row" style="margin-top:20px; color:#FFF;">
+						<div class="col-sm-6">
+							<div class="carousel-content">
+							    <h2 class="animation animated-item-2">As-Salam Alaykoum, WelCome To The Islamic Center of FreeTown.</h2>
+							    </br></br>
+							    <p class="lead" class="animation animated-item-1">
+							    بِسۡمِ ٱللهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿١﻿) 
+								ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَـٰلَمِينَ (﻿٢﻿) ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿٣﻿) مَـٰلِكِ يَوۡمِ ٱلدِّينِ (﻿٤﻿) إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ (﻿٥﻿) ٱهۡدِنَا ٱلصِّرَٲطَ ٱلۡمُسۡتَقِيمَ (﻿٦﻿) صِرَٲطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ (﻿٧﻿)
+								</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-xs-6 animation animated-item-4">
+							<div class="slider-img">
+							    <img src="{% static 'img/img3.png' %}" class="img-responsive">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- End Header-->
+
+	<!-- Body -->
+	<div class="well">
+		<div class="container">
+			<h2 class="text-center">Recent Events & News</h2>
+			<div class="row">
+			    {% for events in context %}
+				<div class="col-sm-4">
+				    <h3>{{ events.name }}</h3>
+				    <blockquote>
+					<p>{{ events.content }}</p>
+					<footer>Date: {{ events.date }}</footer>
+					</blockquote>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div><!-- End body -->
+
+</section><!-- End HomePage -->
+
+{% endblock %}

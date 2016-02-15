@@ -1,0 +1,102 @@
+{% load staticfiles %}
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Voice of Islam</title>
+	<meta name="description" content="Islamic Center">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/Bootstrap/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/Bootstrap/font-awesome.min.css' %}">
+	<link rel="shortcut icon" type="text/css" href="{% static 'img/favicon.jpg' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mainCss.css' %}">
+	<style type="text/css">
+	body {
+		margin-bottom: 0px;
+	}
+
+	#logo {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#footer {
+		border-top: 3px solid green;
+		background-color: #222;
+		color: #FFF;
+	}
+	.jumbotron {
+		background-color: #1F8DD6;
+		color: #FFF;
+	}
+	</style>
+	{% block style %}
+	{% endblock %}
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="top-navbar">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    			</button>
+
+    			<a href="/" class="navbar-brand" id="logo"><img src="{% static 'img/logo.jpg' %}" class="img-responsive"></a>
+    		</div><!-- End navbar header -->
+    		<div class="collapse navbar-collapse" id="navbar-collapse">
+    			<ul class="nav navbar-nav">
+    			    <li><a href="/">Home</a></li>
+    				<li><a href="{% url 'education' %}">Education</a></li>
+    				<li><a href="{% url 'dawa' %}">Dawa</a></li>
+    				<li><a href="{% url 'research' %}">Research</a></li>
+    			</ul>
+    			<ul class="nav navbar-nav navbar-right">
+    				<li><a href="{% url 'faq' %}">FAQ</a></li>
+    				<li><a href="{% url 'contact' %}">Contact Us</a></li>
+    			</ul>
+    		</div>
+    	</div><!-- End Container -->
+    </nav><!-- End navbar -->
+
+{% block content %}
+
+{% endblock %}
+
+<footer id="footer">
+		<div class="container">
+
+		<h2 class="text-center">Like Us on</h2>
+        <ul class="list-inline text-center">
+        	<li><a href="http://www.facebook.com/voice" target="blank"><i class="fa fa-facebook fa-3x"></i></a></li>
+        	<li><a href="http://www.twitter.com/voice" target="blank"><i class="fa fa-twitter fa-3x"></i></a></li>
+        	<li><a href="http://www.linkedin.com/voice" target="blank"><i class="fa fa-linkedin fa-3x"></i></a></li>
+        	<li><a href="http://www.youtube.com/Voice" target="blank"><i class="fa fa-youtube fa-3x"></i></a></li>
+        </ul>
+        <br>
+        <br>
+        
+			<div class="row">
+				<div class="col-sm-6">
+					&copy; 2016 FreeTown Islamic Center. All Rights Reserved.
+				</div>
+				<div class="col-sm-6">
+					<ul class="list-inline">
+						<li><a href="{% url 'home' %}">Home</a></li>|
+						<li><a href="{% url 'education' %}">Education</a></li>|
+						<li><a href="{% url 'dawa' %}">Dawa</a></li>|
+						<li><a href="{% url 'research' %}">Research</a></li>|
+						<li><a href="{% url 'faq' %}">FAQ</a></li>|
+						<li><a href="{% url 'contact' %}">Contact Us</a></li>|
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+<script src="{% static 'js/jQuery/jquery.min.js' %}"></script>
+<script src="{% static 'js/Bootstrap/bootstrap.min.js' %}"></script>
+{% block script %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="carousel-inner">
+		<div class="item active" style="background-image:url({% static 'img/bg4.jpg' %});margin-top:50px;color:#FFF;">
+		    <div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-xs-6">
+						<div class="carousel-content">
+						    <h2 style="margin-top:10%;">As-Salam Alaykoum, welcome to The Islamic Center of FreeTown.</h2>
+						    </br></br>
+						    <p class="lead" style="margin-top:30%;">
+						    بِسۡمِ ٱللهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿١﻿) 
+							ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَـٰلَمِينَ (﻿٢﻿) ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿٣﻿) مَـٰلِكِ يَوۡمِ ٱلدِّينِ (﻿٤﻿) إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ (﻿٥﻿) ٱهۡدِنَا ٱلصِّرَٲطَ ٱلۡمُسۡتَقِيمَ (﻿٦﻿) صِرَٲطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ (﻿٧﻿)
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-6 col-xs-6">
+					<div class="slider-img">
+					    <img src="{% static 'img/img1.png' %}" class="img-responsive">
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- End Header -->
+
+	<!-- MainContent -->
+	<div class="container">
+		<h2 class="text-center" class="primary">Our Schools</h2>
+		<div class="row">
+			<div class="page-header" style="margin-left:5px;">
+    			<h2>School Of Memorization.<small> Come and Memorize The Holy Qur'an</small></h2>
+    		</div>
+			<div class="col-sm-7">
+			    <p><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+				</p>
+				<img src="{% static 'img/Quran.jpg' %}" class="img-responsive">
+			</div>
+
+			<div class="col-sm-5">
+			    <h3 class="text-center">Levels We offer</h3>
+				<div class="table-responsive">
+					<table class="table table-bordered table-hover table-condensed">
+						<tbody>
+							<tr>
+								<td>Levels</td>
+								<td>Description</td>
+								<td>Duration</td>
+							</tr>
+							<tr>
+								<td>Level 1</td>
+								<td>You Will Memorize 60 Suras</td>
+								<td class="default">9 Months</td>
+							</tr>
+							<tr>
+								<td>Level 2</td>
+								<td>You Will Memorize 90 Suras</td>
+								<td class="info">2 Years</td>
+							</tr>
+							<tr>
+								<td>Level 3</td>
+								<td>You will Memorize The Whole Qur'an</td>
+								<td class="success">3 Years</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="page-header" style="margin-left:5px;">
+    			<h2>School Of Saria.<small> Come and Study The Low of Islam</small></h2>
+    		</div>
+			<div class="col-sm-7">
+			    <p><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+				</p>
+				<img src="{% static 'img/saria.jpg' %}" class="img-responsive">
+			</div>
+
+			<div class="col-sm-5">
+			    <h3 class="text-center">Levels We Offer</h3>
+				<div class="table-responsive">
+					<table class="table table-bordered table-hover table-condensed">
+						<tbody>
+							<tr>
+								<td>Levels</td>
+								<td>Description</td>
+								<td>Duration</td>
+							</tr>
+							<tr>
+								<td>Level 1</td>
+								<td>You Will Memorize 60 Suras</td>
+								<td class="default">9 Months</td>
+							</tr>
+							<tr>
+								<td>Level 2</td>
+								<td>You Will Memorize 90 Suras</td>
+								<td class="info">2 Years</td>
+							</tr>
+							<tr>
+								<td>Level 3</td>
+								<td>You will Memorize The Whole Qur'an</td>
+								<td class="success">3 Years</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-header" style="margin-left:5px;">
+    			<h2>If You Want To Know More.<small> <a href="{% url 'contact' %}">Contact Us</a></small></h2>
+    		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block style %}
+ 
+ <style type="text/css">
+   video {
+   	border: 2px solid orange;
+   }
+ </style>
+
+{% endblock %}
+
+{% block content %}
+
+  <!-- Header -->
+  <div class="carousel-inner">
+		<div class="item active" style="background-image:url({% static 'img/bg7.jpg' %});margin-top:50px;color:#FFF;">
+		    <div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-xs-6">
+						<div class="carousel-content">
+						    <h2 style="margin-top:10%;">As-Salam Alaykoum, welcome to The Islamic Center of FreeTown.</h2>
+						    </br></br>
+						    <p class="lead" style="margin-top:30%;">
+						    بِسۡمِ ٱللهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿١﻿) 
+							ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَـٰلَمِينَ (﻿٢﻿) ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ (﻿٣﻿) مَـٰلِكِ يَوۡمِ ٱلدِّينِ (﻿٤﻿) إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ (﻿٥﻿) ٱهۡدِنَا ٱلصِّرَٲطَ ٱلۡمُسۡتَقِيمَ (﻿٦﻿) صِرَٲطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ (﻿٧﻿)
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-6 col-xs-6">
+					    <img src="{% static 'img/img3.png' %}" class="img-responsive">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- End Header -->
+
+	<!-- MainContent -->
+	<div class="container">
+
+	    <section>
+    		<div class="page-header">
+    			<h2>Hadiths Of The Day.<small> Check out the Awesome Hadiths Posted By Our Awesome Scholars </small></h2>
+    		</div>
+
+    		<div class="row">
+    		    {% for post in posts %}
+    			<div class="col-md-4">
+    				<blockquote>
+    				     <strong>{{ post.name }}</strong>
+    					<p>{{ post.post }}</p>
+    					<footer>Posted By: {{ post.posted_by }}</footer>
+    				</blockquote>
+    			</div>
+    			{% endfor %}
+    		</div><!-- End row -->
+    	</section>
+
+		<h2 class="text-center">Lectures</h2>
+		{% for host in hosts %}
+		<div class="row">
+			<div class="page-header" style="margin-left:5px;">
+    			<h2>Lecture By.<small> {{ host.name }}</small></h2>
+    		</div>
+    		<div class="col-sm-8">
+    			<video  width="auto" height="auto" controls="controls" preload="preload" poster="{% static 'img/poster.png'%}" class="img img-responsive">
+                        <source src="{% static 'videos/Hamza-Tzortzis-Words-of-Advice-to-all-Muslims.mp4' %}" type="video/mp4">
+                        Your Browser does not support the video tag try upgrading it
+                </video>
+    		</div>
+    		<div class="col-sm-4">
+    			<h3 class="text-center">Lecturer's Biography</h3>
+    			<p>{{ host.biography }}
+				</p>
+    		</div>
+		</div>
+		{% endfor %}
+
+		<div class="page-header" style="margin-left:5px;">
+    			<h2>If You Want To Give a Lecture.<small> <a href="{% url 'contact' %}">Contact Us</a></small></h2>
+    	</div>
+	</div>
+
+{% endblock %}
